@@ -2,17 +2,19 @@ var btn = document.querySelector("#btn");
 var number1 = document.querySelector("#input");
 var result = document.querySelector("#output");
 
-
-
 function clickHandler() {
 
-    let number = number1.value;
+    var number = number1.value;
+    var isPrime = true;
 
-    let isPrime = true;
 
-if (number == 1) {
+    if(number <= 1 || number >= 31) {
+        console.log("Please enter valid date");
+    } 
+
+    if (number == 1) {
        console.log("1 is neither prime nor composite number.");
-}
+       }
 
     else if(number>1) {
         for(let i =2; i<number;i++) {
