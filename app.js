@@ -1,6 +1,7 @@
 var btn = document.querySelector("#btn");
 var number1 = document.querySelector("#input");
 var result = document.querySelector("#output");
+var reset = document.querySelector("#reset");
 
 function clickHandler() {
 
@@ -8,7 +9,7 @@ function clickHandler() {
     var isPrime = true;
 
     if (number == 1) {
-        result.innerText = "1 is neither a prime or composite number!"
+        result.innerText = "1 is neither prime or composite number!"
         }
  
      else if(number>1) {
@@ -26,4 +27,11 @@ function clickHandler() {
      }    
 }
 
+function resetHandler() {
+    number1.value = "";
+    result.innerText = "";
+}
+
 btn.addEventListener("click", clickHandler)
+
+reset.addEventListener("click", resetHandler)

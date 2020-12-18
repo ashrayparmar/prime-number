@@ -5,12 +5,17 @@ body {
   background-repeat: no-repeat, repeat;
   background-size: 100%;
   height: 500px;
+  display: block;
+  margin: auto;
 }
 
-.heading {
-  color: black;
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  background-color: black;
+  color: white;
   text-align: center;
-  display: block;
   margin: auto;
 }
 
@@ -20,6 +25,7 @@ body {
   height: 5vh;
   width: 15%;
   margin-bottom: 15px;
+  margin-top: 90px;
   outline: none;
   text-align: center;
   font-weight: bold;
@@ -33,6 +39,17 @@ body {
   margin: auto;
   border: 2px solid black;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 0.5rem 0.5rem;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  border: 2px solid black;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 #btn:hover {
@@ -40,6 +57,15 @@ body {
   color: white;
   border: 2px solid black;
   opacity: 0.2 ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #262626;
+  color: white;
+  border: 2px solid black;
+  opacity: 0.2 ease;
+  cursor: pointer;
 }
 
 #output {
@@ -50,7 +76,39 @@ body {
   margin: auto;
   color: black;
   background-color: #d4d4d4;
+  justify-content: center;
   font-weight: bold;
   text-align: center;
   font-size: 1.2rem;
+}
+
+footer {
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer li {
+  color: white;
+  padding: 0.5rem 1rem;
+  list-style: none;
+  display: inline-block;
+  padding-inline-start: 0px;
+  margin-top: 15px;
+}
+
+footer ul {
+  padding-inline-start: 0px;
+}
+
+.link {
+  color: white;
+}
+
+.link:hover {
+  transition: 0.2 ease;
+  color: rgb(202, 193, 193);
 }
