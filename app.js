@@ -7,28 +7,23 @@ function clickHandler() {
     var number = number1.value;
     var isPrime = true;
 
-
-    if(number <= 1 || number >= 31) {
-        console.log("Please enter valid date");
-    } 
-
     if (number == 1) {
-       console.log("1 is neither prime nor composite number.");
-       }
-
-    else if(number>1) {
-        for(let i =2; i<number;i++) {
-            if(number % i === 0) {
-                isPrime = false;
-                break;
-            }
+        result.innerText = "1 is neither a prime or composite number!"
         }
-        if (isPrime) {
-            console.log(`${number} is a prime number`);
-        } else {
-            console.log(`${number} is a not prime number`);
+ 
+     else if(number>1) {
+         for(let i =2; i<number;i++) {
+             if(number % i === 0) {
+                 isPrime = false;
+                 break;
+             }
+         }
+         if (isPrime) {
+            result.innerText = number + " is a prime number!"
+         } else {
+            result.innerText = number + " is not a prime number!"
         }
-    }
+     }    
 }
 
 btn.addEventListener("click", clickHandler)
